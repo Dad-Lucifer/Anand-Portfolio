@@ -8,12 +8,9 @@
     "start": "next start",
     "lint": "next lint"
   },
-
   "engines": {
     "node": ">=18 <19"
   },
-
-  
   "dependencies": {
     "@dnd-kit/core": "^6.3.1",
     "@dnd-kit/sortable": "^10.0.0",
@@ -100,6 +97,7 @@
     "eslint": "^9",
     "eslint-config-next": "15.3.5",
     "nodemon": "^3.1.10",
+    "postcss": "^8.5.6",
     "tailwindcss": "^3.4.18",
     "tw-animate-css": "^1.3.5",
     "typescript": "^5",

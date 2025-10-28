@@ -1,5 +1,15 @@
-@import "tailwindcss";
-@import "tw-animate-css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
 
 @custom-variant dark (&:is(.dark *));
 
@@ -45,6 +55,8 @@
 
 :root {
   --radius: 0.625rem;
+  --background: 0 0% 100%;
+  --foreground: 240 10% 3.9%;
   /* Squid Game inspired palette */
   --squid-black: oklch(0.08 0 0);
   --squid-pink: oklch(0.65 0.15 350);
