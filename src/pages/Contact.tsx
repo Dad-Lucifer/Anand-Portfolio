@@ -1,8 +1,7 @@
 "use client";
 
 import React from "react";
-import { useRouter } from "next/router";
-import Link from "next/link";
+import { Link } from "react-router-dom";
 
 import ContactHero from "@/components/sections/ContactHero";
 import { ContactForm } from "@/components/sections/ContactForm";
@@ -10,8 +9,6 @@ import { ContactInfo } from "@/components/sections/ContactInfo";
 import ContactCTA from "@/components/sections/ContactCTA";
 
 const Contact: React.FC = () => {
-  const router = useRouter();
-
   // Example: You can programmatically navigate using router.push()
   // e.g. router.push("/thank-you") after successful form submission
 
@@ -27,11 +24,8 @@ const Contact: React.FC = () => {
 
         {/* Example Link navigation instead of useNavigate */}
         <div className="mt-10 text-center">
-          <Link
-            href="/"
-            className="text-blue-600 hover:text-blue-800 font-medium transition-colors"
-          >
-            ← Back to Home
+          <Link to="/" className="text-primary hover:underline">
+            Back to Home
           </Link>
         </div>
       </section>

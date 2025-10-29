@@ -66,7 +66,10 @@ const ContactForm: React.FC = () => {
     setFormState({ status: 'loading', message: '' });
 
     try {
-      const response = await fetch('https://formspree.io/f/xqagpwrv', {
+      const endpoint = import.meta.env.DEV
+        ? '/api/contact'
+        : 'https://formspree.io/f/xqagpwrv';
+      const response = await fetch(endpoint, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -113,8 +116,6 @@ const ContactForm: React.FC = () => {
     >
       <div className="bg-card/50 backdrop-blur-md border border-border rounded-2xl shadow-xl p-8">
         <form 
-          action="https://formspree.io/f/xqagpwrv" 
-          method="POST"
           onSubmit={handleSubmit}
           className="space-y-6"
         >
