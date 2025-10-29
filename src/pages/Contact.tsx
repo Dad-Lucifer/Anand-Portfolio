@@ -1,7 +1,8 @@
 "use client";
 
 import React from "react";
-import { Link } from "react-router-dom";
+import { useRouter } from "next/router";
+import Link from "next/link";
 
 import ContactHero from "@/components/sections/ContactHero";
 import { ContactForm } from "@/components/sections/ContactForm";
